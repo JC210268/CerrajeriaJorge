@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cerrajería Jorge – Aperturas, copias y urgencias</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background: #f2f2f2; color:#333; }
+    header { background: #fff; padding: 12px 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top:0; z-index:10; }
+    nav { display:flex; justify-content:center; gap:20px; }
+    nav a { color:#333; font-weight:bold; text-decoration:none; }
+    .hero { padding:60px 20px; text-align:center; background:#22c55e; color:#fff; }
+    .hero h1 { margin:0 0 10px; font-size:32px; }
+    .hero p { font-size:18px; margin:0 0 20px; }
+    .btn-hero { background:#fff; color:#22c55e; padding:12px 24px; border:none; border-radius:4px; font-weight:bold; cursor:pointer; text-decoration:none; }
+    section { padding:40px 20px; max-width:900px; margin:0 auto; }
+    .services { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
+    .service { background:#fff; padding:20px; border-radius:4px; box-shadow:0 1px 3px rgba(0,0,0,0.1); }
+    .service h3 { margin:0 0 10px; font-size:20px; color:#22c55e; }
+    .about, .contact { background:#fff; padding:20px; border-radius:4px; box-shadow:0 1px 3px rgba(0,0,0,0.1); }
+    .contact form { display:grid; gap:12px; }
+    .contact input, .contact textarea { width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; }
+    .contact button { background:#22c55e; color:#fff; padding:12px; border:none; border-radius:4px; font-weight:bold; cursor:pointer; }
+    footer { text-align:center; padding:20px; font-size:14px; color:#666; }
+    .wa-float { position:fixed; bottom:20px; right:20px; }
+    .wa-float a { background:#25D366; color:#fff; padding:14px 18px; border-radius:50px; display:inline-flex; align-items:center; gap:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2); text-decoration:none; font-weight:bold; }
+    .wa-float a svg { fill:#fff; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+  
+  <section id="inicio" class="hero">
+    <h1>Cerrajería Jorge</h1>
+    <p>Aperturas urgentes, copias de llaves y servicio a domicilio sin romper</p>
+    <a href="#contacto" class="btn-hero">Contactá ahora</a>
+  </section>
+  
+  <section id="servicios">
+    <h2 style="text-align:center;">Servicios</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Aperturas rápidas</h3>
+        <p>Hogar, oficina o persianas. Sin romper y con atención urgente.</p>
+      </div>
+      <div class="service">
+        <h3>Instalación de cerraduras</h3>
+        <p>Multipunto, perimetral, manual y digital. Servicio profesional.</p>
+      </div>
+      <div class="service">
+        <h3>Copias de llaves</h3>
+        <p>Llaves tradicionales y con chip. Precisión garantizada.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="sobre">
+    <h2 style="text-align:center;">Quiénes somos</h2>
+    <div class="about">
+      <p>Más de 20 años ofreciendo soluciones de cerrajería confiables, profesionales y transparentes. Atención personalizada en Buenos Aires y alrededores.</p>
+    </div>
+  </section>
+  
+  <section id="contacto">
+    <h2 style="text-align:center;">Contacto</h2>
+    <div class="contact">
+      <form>
+        <input type="text" placeholder="Tu nombre" required />
+        <input type="tel" placeholder="Teléfono" required />
+        <textarea placeholder="Tu consulta..." required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+  
+  <div class="wa-float">
+    <a href="https://wa.me/5491100000000?text=Hola,%20necesito%20un%20servicio%20de%20cerrajería" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+        <path d="M...Z"/>
+      </svg>
+      WhatsApp
+    </a>
+  </div>
+  
+  <footer>
+    © 2025 Cerrajería Jorge — Todos los derechos reservados.
+  </footer>
+</body>
+</html>
