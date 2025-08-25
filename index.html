@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cerrajería Jorge</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <style>
 body {
   margin: 0;
@@ -17,19 +18,23 @@ body {
 
 header {
   background: #e5d3b3;
-  padding: 40px 20px;
+  padding: 50px 20px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
 header h1 {
-  font-size: 2.5em;
+  font-family: 'Playfair Display', serif;
+  font-size: 3em; 
   margin: 0;
+  color: #3e3e3e;
 }
 
 header p {
+  font-family: 'Georgia', serif;
   font-style: italic;
   margin-top: 10px;
-  font-size: 1.2em;
+  font-size: 1.3em;
+  color: #4b4b4b;
 }
 
 section {
@@ -37,20 +42,20 @@ section {
   margin: 40px auto;
   padding: 20px;
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease, transform 1s ease, box-shadow 0.4s ease, transform 0.4s ease;
+  transform: translateY(20px) scale(0.98);
+  transition: opacity 1s ease, transform 0.4s ease, box-shadow 0.4s ease;
   border-radius: 10px;
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255,255,255,0.85);
 }
 
 section.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
 }
 
 section h2 {
@@ -134,7 +139,7 @@ section p {
   <p><strong>Teléfono:</strong> 47291456</p>
   <p><strong>Móvil:</strong> 1151358953</p>
   <p><strong>Dirección:</strong> Artigas 6275 - Villa Ballester</p>
-  <p><strong>Email:</strong> cerrajeriajorge@hotmail.com</p>
+  <p><strong>Email:</strong> <a href="mailto:cerrajeriajorge@hotmail.com">cerrajeriajorge@hotmail.com</a></p>
 </section>
 
 <section>
@@ -155,6 +160,8 @@ function showSectionsOnScroll() {
     const sectionTop = section.getBoundingClientRect().top;
     if(sectionTop < triggerBottom){
       section.classList.add('visible');
+    } else {
+      section.classList.remove('visible'); // permite repetir animación
     }
   });
 }
