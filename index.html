@@ -4,137 +4,127 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cerrajería Jorge</title>
-  <!-- Fuente y FontAwesome -->
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
-      font-family: 'Crimson Text', serif;
       margin: 0;
-      padding: 0;
-      background: #f9f5e7 url("https://www.transparenttextures.com/patterns/aged-paper.png");
+      font-family: 'Georgia', serif;
+      background-color: #f4f1e9;
+      background-image: url('https://www.transparenttextures.com/patterns/aged-paper.png');
       color: #2b2b2b;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #e6d3a3 url("https://www.transparenttextures.com/patterns/paper-fibers.png");
       text-align: center;
+    }
+    header {
+      background: #e5d3b3;
       padding: 40px 20px;
-      border-bottom: 2px solid #c1a87d;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     }
-
     header h1 {
+      font-size: 2.5em;
       margin: 0;
-      font-size: 2.5rem;
-      font-weight: bold;
     }
-
     header p {
       font-style: italic;
-      margin: 10px 0 0;
-      font-size: 1.2rem;
+      margin-top: 10px;
+      font-size: 1.2em;
     }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 30px 20px;
-    }
-
     section {
-      margin-bottom: 40px;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
     }
-
     section h2 {
-      font-size: 1.6rem;
-      margin-bottom: 15px;
+      font-size: 1.8em;
+      margin-bottom: 10px;
       display: flex;
+      justify-content: center;
       align-items: center;
       gap: 10px;
-      font-weight: bold;
-      color: #3c2f2f;
     }
-
     section p {
-      margin: 0;
-      font-size: 1.1rem;
+      font-size: 1.1em;
+      line-height: 1.6;
     }
-
-    /* WhatsApp Button */
-    .whatsapp {
+    .whatsapp-float {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-    }
-
-    .whatsapp a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #25d366;
-      border-radius: 50%;
       width: 60px;
       height: 60px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: transform 0.2s;
-    }
-
-    .whatsapp a:hover {
-      transform: scale(1.1);
-    }
-
-    .whatsapp i {
-      color: white;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-size: 30px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+      z-index: 100;
+      text-decoration: none;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
+    .btn-reseñas {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #8b5e3c;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .btn-reseñas:hover {
+      background: #6a4529;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Cerrajería Jorge</h1>
     <p>Con más de 55 años en la zona desde 1968 nuestra Cerrajería ha estado al servicio de sus clientes.</p>
   </header>
 
-  <div class="container">
-    <section>
-      <h2><i class="fa-solid fa-key"></i> Service a domicilio</h2>
-      <p>Casas - Consorcios - Empresas</p>
-    </section>
+  <section>
+    <h2><i class="fas fa-tools"></i> Service a domicilio</h2>
+    <p>Casas - Consorcios - Empresas</p>
+  </section>
 
-    <section>
-      <h2><i class="fa-solid fa-key-skeleton"></i> Copias de llaves</h2>
-      <p>De todo tipo: Multipunto común, Ranurada y Telescópica - Doble Paleta - Yale - Comunes una Paleta - Caja Fuerte - Tipo Cruz Pasador - Tubular - Mapeadas - Etc.</p>
-    </section>
+  <section>
+    <h2><i class="fas fa-key"></i> Copias de llaves</h2>
+    <p>De todo tipo: Multipunto común, Ranurada y Telescópica - Doble Paleta - Yale - Comunes una Paleta - Caja Fuerte - Tipo Cruz Pasador - Tubular - Mapeadas - Etc.</p>
+  </section>
 
-    <section>
-      <h2><i class="fa-solid fa-lock"></i> Instalación y Reparación de Cerraduras</h2>
-      <p>Comunes - Doble Paleta - Tipo Yale - Multipunto - Multianclaje - Digitales - Tipo Pomo - De Blindex - Candados - Etc.<br>
-      Cambios de Combinación - Unificación - Amaestramiento - Adaptación y Restauración</p>
-    </section>
+  <section>
+    <h2><i class="fas fa-lock"></i> Instalación y Reparación de Cerraduras</h2>
+    <p>Comunes - Doble Paleta - Tipo Yale - Multipunto - Multianclaje - Digitales - Tipo Pomo - De Blindex - Candados - Etc.</p>
+    <p>Cambios de Combinación - Unificación - Amaestramiento - Adaptación y Restauración</p>
+  </section>
 
-    <section>
-      <h2><i class="fa-solid fa-phone"></i> Contacto</h2>
-      <p>
-        Teléfono: ☎️ 47291456<br>
-        Móvil: 📱 1151358953<br>
-        Dirección: Artigas 6275 - Villa Ballester<br>
-        Email: <a href="mailto:cerrajeriajorge@hotmail.com">cerrajeriajorge@hotmail.com</a>
-      </p>
-    </section>
+  <section>
+    <h2><i class="fas fa-address-card"></i> Contacto</h2>
+    <p><strong>Teléfono:</strong> 47291456</p>
+    <p><strong>Móvil:</strong> 1151358953</p>
+    <p><strong>Dirección:</strong> Artigas 6275 - Villa Ballester</p>
+    <p><strong>Email:</strong> cerrajeriajorge@hotmail.com</p>
+  </section>
 
-    <section>
-      <h2><i class="fa-solid fa-location-dot"></i> Ubicación</h2>
-      <p><a href="https://maps.app.goo.gl/fL4jQ9iNRWkMWptj6" target="_blank">Ver en Google Maps</a></p>
-    </section>
-  </div>
+  <section>
+    <h2><i class="fas fa-map-marker-alt"></i> Ubicación</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.315221499105!2d-58.563..."></iframe>
+    <a class="btn-reseñas" href="https://maps.app.goo.gl/VGMn6AGvDJiAjF3A7" target="_blank">Ver reseñas en Google</a>
+  </section>
 
-  <div class="whatsapp">
-    <a href="https://wa.me/541151358953" target="_blank" title="WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-  </div>
+  <a href="https://wa.me/541151358953" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
 </body>
 </html>
