@@ -70,6 +70,11 @@ header p {
     margin: -50px -20px 20px -20px; /* Ajusta para que se extienda a los bordes de la cabecera */
     border-radius: 10px 10px 0 0;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    /* Uso de flexbox para centrar el contenido horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Espacio entre las llaves y el título */
 }
 
 .title-highlight h1 {
@@ -77,6 +82,10 @@ header p {
     font-size: 3em;
     font-family: 'Playfair Display', serif;
     margin: 0;
+}
+
+.key-left {
+    transform: scaleX(-1); /* Voltea la llave horizontalmente */
 }
 
 section {
@@ -157,7 +166,9 @@ section p {
 
 <header>
   <div class="title-highlight">
-    <h1>🗝️ Cerrajería Jorge 🗝️</h1>
+    <span class="key-left">🗝️</span>
+    <h1>Cerrajería Jorge</h1>
+    <span>🗝️</span>
   </div>
   <p>Con más de 55 años en la zona desde 1968 nuestra Cerrajería ha estado al servicio de sus clientes.</p>
   <div class="header-contact">
