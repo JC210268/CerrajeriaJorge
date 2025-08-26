@@ -16,7 +16,7 @@ body {
   text-align: center;
 }
 
-/* Teléfono y horario en la cabecera */
+/* Teléfono en la cabecera */
 .header-contact {
     font-family: 'Georgia', serif;
     font-style: italic;
@@ -60,6 +60,23 @@ header p {
   margin-top: 10px;
   font-size: 1.3em;
   color: #4b4b4b;
+}
+
+/* Nuevo estilo para el título con fondo y texto en contraste */
+.title-highlight {
+    background-color: #6b5b3e;
+    color: white;
+    padding: 10px 20px;
+    margin: -50px -20px 20px -20px; /* Ajusta para que se extienda a los bordes de la cabecera */
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.title-highlight h1 {
+    color: white; /* Asegura que el título sea blanco dentro del bloque */
+    font-size: 3em;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
 }
 
 section {
@@ -139,13 +156,14 @@ section p {
 <body>
 
 <header>
-  <h1>Cerrajería Jorge</h1>
+  <div class="title-highlight">
+    <h1>Cerrajería Jorge</h1>
+  </div>
   <p>Con más de 55 años en la zona desde 1968 nuestra Cerrajería ha estado al servicio de sus clientes.</p>
   <div class="header-contact">
       <a href="tel:+541151358953" class="phone-number">
         <i class="fas fa-phone-alt"></i> 1151358953
       </a>
-      <p> </p>
   </div>
 </header>
 
