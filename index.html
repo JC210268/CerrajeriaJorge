@@ -16,6 +16,31 @@ body {
   text-align: center;
 }
 
+/* Teléfono y horario en la cabecera */
+.header-contact {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    margin-top: 20px;
+    font-size: 1.3em;
+    color: #4b4b4b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-contact .phone-number {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #3e3e3e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header-contact .phone-number:hover {
+    color: #6b5b3e;
+}
+
 header {
   background: #e5d3b3;
   padding: 50px 20px;
@@ -116,6 +141,12 @@ section p {
 <header>
   <h1>Cerrajería Jorge</h1>
   <p>Con más de 55 años en la zona desde 1968 nuestra Cerrajería ha estado al servicio de sus clientes.</p>
+  <div class="header-contact">
+      <a href="tel:+541151358953" class="phone-number">
+        <i class="fas fa-phone-alt"></i> 1151358953
+      </a>
+      <p>Servicio de Emergencia 24/7</p>
+  </div>
 </header>
 
 <section>
@@ -137,14 +168,24 @@ section p {
 <section>
   <h2><i class="fas fa-address-card"></i> Contacto</h2>
   <p><strong>Teléfono:</strong> 47291456</p>
-  <p><strong>Móvil:</strong> 1151358953</p>
+  <p><strong>Móvil:</strong> <a href="tel:1151358953">1151358953</a></p>
   <p><strong>Dirección:</strong> Artigas 6275 - Villa Ballester</p>
   <p><strong>Email:</strong> <a href="mailto:cerrajeriajorge@hotmail.com">cerrajeriajorge@hotmail.com</a></p>
 </section>
 
 <section>
   <h2><i class="fas fa-map-marker-alt"></i> Ubicación</h2>
-  <a class="btn-reseñas" href="https://maps.app.goo.gl/VGMn6AGvDJiAjF3A7" target="_blank">Ver ubicación y reseñas en Google Maps</a>
+  <div style="width: 100%; max-width: 800px; margin: auto;">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3286.4509145689435!2d-58.5711159!3d-34.5421369!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcba1a014a10cf%3A0x76b88646b9fded49!2sCerrajeria%20Jorge!5e0!3m2!1ses-419!2sar!4v1756158256612!5m2!1ses-419!2sar" 
+      width="100%" 
+      height="450" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
 </section>
 
 <a href="https://wa.me/541151358953" class="whatsapp-float" target="_blank">
@@ -161,7 +202,7 @@ function showSectionsOnScroll() {
     if(sectionTop < triggerBottom){
       section.classList.add('visible');
     } else {
-      section.classList.remove('visible'); // permite repetir animación
+      section.classList.remove('visible');
     }
   });
 }
