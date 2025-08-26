@@ -1,101 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cerrajería Jorge</title>
-    <!-- Incluye el framework de CSS Tailwind para un diseño moderno y responsive -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Carga la fuente "Inter" de Google Fonts para un aspecto limpio -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cerrajería Jorge</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #f4f1e9;
+  background-image: url('https://www.transparenttextures.com/patterns/aged-paper.png');
+  color: #2b2b2b;
+  text-align: center;
+}
+
+header {
+  background: #e5d3b3;
+  padding: 50px 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em; 
+  margin: 0;
+  color: #3e3e3e;
+}
+
+header p {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 1.3em;
+  color: #4b4b4b;
+}
+
+section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  transition: opacity 1s ease, transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.85);
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+section:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+section h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+section h2 i {
+  color: #6b5b3e;
+}
+
+section p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  z-index: 100;
+  text-decoration: none;
+}
+
+.btn-reseñas {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #8b5e3c;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-reseñas:hover {
+  background: #6a4529;
+}
+</style>
 </head>
-<body class="bg-gray-200 min-h-screen">
+<body>
 
-    <!-- Cabecera principal: fondo oscuro y diseño responsive -->
-    <header class="bg-blue-950 text-white p-6 sm:p-8 shadow-xl">
-        <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
-            
-            <!-- Nombre del negocio -->
-            <h1 class="text-4xl sm:text-5xl font-extrabold text-blue-300 tracking-tight text-center sm:text-left">
-                Cerrajería Jorge
-            </h1>
-            
-            <!-- Contenedor para el teléfono y horario -->
-            <div class="flex flex-col items-center sm:items-end space-y-2">
-                
-                <!-- Botón de llamada a la acción -->
-                <a href="tel:+5491112345678" 
-                   class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full 
-                          shadow-lg transition duration-300 ease-in-out transform hover:scale-105 
-                          flex items-center space-x-2 text-lg">
-                    <!-- Ícono de teléfono (inline SVG) -->
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.19.44l-1.424 1.895a2.25 2.25 0 00-.714.549L12 16.5M7.5 14.25H4.5a2.25 2.25 0 01-2.25-2.25V9.75a2.25 2.25 0 012.25-2.25h3.75m10.5 0a2.25 2.25 0 012.25-2.25H21a2.25 2.25 0 012.25 2.25v2.25m-6.75 0h-1.5" />
-                    </svg>
-                    <span>Llámanos Ahora</span>
-                </a>
-                
-                <!-- Horario de atención -->
-                <p class="text-sm font-semibold text-gray-300 text-center sm:text-right">
-                    Servicio de Emergencia 24/7
-                </p>
-                <p class="text-sm font-light text-gray-400">
-                    Atención de 9:00 a 19:00 para otros servicios.
-                </p>
-            </div>
-            
-        </div>
-    </header>
-    
-    <main class="w-full max-w-4xl mx-auto p-4 sm:p-8 mt-8">
-        
-        <!-- Sección de servicios -->
-        <section class="bg-white shadow-xl rounded-2xl p-6 sm:p-8 mb-8 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-blue-900 mb-6">Nuestros Servicios</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Servicio de Apertura -->
-                <div class="bg-blue-50 p-6 rounded-xl shadow-md transform hover:scale-105 transition duration-300">
-                    <h3 class="font-bold text-xl mb-2 text-blue-800">Apertura de Puertas</h3>
-                    <p class="text-gray-700">¿Te has quedado fuera de casa o del auto? Te ayudamos a entrar sin dañar la cerradura.</p>
-                </div>
-                <!-- Servicio de Cambio de Cerraduras -->
-                <div class="bg-blue-50 p-6 rounded-xl shadow-md transform hover:scale-105 transition duration-300">
-                    <h3 class="font-bold text-xl mb-2 text-blue-800">Cambio de Cerraduras</h3>
-                    <p class="text-gray-700">Servicio profesional para cambiar cerraduras antiguas, dañadas o de seguridad.</p>
-                </div>
-                <!-- Servicio de Duplicado de Llaves -->
-                <div class="bg-blue-50 p-6 rounded-xl shadow-md transform hover:scale-105 transition duration-300">
-                    <h3 class="font-bold text-xl mb-2 text-blue-800">Duplicado de Llaves</h3>
-                    <p class="text-gray-700">Hacemos copias de llaves de todo tipo, con rapidez y precisión.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Sección del mapa, con el código que me proporcionaste -->
-        <section class="bg-white shadow-xl rounded-2xl p-6 sm:p-8 mb-8 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-blue-900 mb-6">Encuéntranos Aquí</h2>
-            <!-- El contenedor con el iframe que me enviaste -->
-            <div style="width: 100%; max-width: 800px; margin: auto;">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3286.4509145689435!2d-58.5711159!3d-34.5421369!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcba1a014a10cf%3A0x76b88646b9fded49!2sCerrajeria%20Jorge!5e0!3m2!1ses-419!2sar!4v1756158256612!5m2!1ses-419!2sar" 
-                    width="100%" 
-                    height="450" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"
-                    class="rounded-xl shadow-lg"
-                    title="Mapa de la ubicación de Cerrajería Jorge"
-                ></iframe>
-            </div>
-        </section>
+<header>
+  <h1>Cerrajería Jorge</h1>
+  <p>Con más de 55 años en la zona desde 1968 nuestra Cerrajería ha estado al servicio de sus clientes.</p>
+</header>
 
-    </main>
+<section>
+  <h2><i class="fas fa-tools"></i> Service a domicilio</h2>
+  <p>Casas - Consorcios - Empresas</p>
+</section>
+
+<section>
+  <h2><i class="fas fa-key"></i> Copias de llaves</h2>
+  <p>De todo tipo: Multipunto común, Ranurada y Telescópica - Doble Paleta - Yale - Comunes una Paleta - Caja Fuerte - Tipo Cruz Pasador - Tubular - Mapeadas - Etc.</p>
+</section>
+
+<section>
+  <h2><i class="fas fa-lock"></i> Instalación y Reparación de Cerraduras</h2>
+  <p>Comunes - Doble Paleta - Tipo Yale - Multipunto - Multianclaje - Digitales - Tipo Pomo - De Blindex - Candados - Etc.</p>
+  <p>Cambios de Combinación - Unificación - Amaestramiento - Adaptación y Restauración</p>
+</section>
+
+<section>
+  <h2><i class="fas fa-address-card"></i> Contacto</h2>
+  <p><strong>Teléfono:</strong> 47291456</p>
+  <p><strong>Móvil:</strong> 1151358953</p>
+  <p><strong>Dirección:</strong> Artigas 6275 - Villa Ballester</p>
+  <p><strong>Email:</strong> <a href="mailto:cerrajeriajorge@hotmail.com">cerrajeriajorge@hotmail.com</a></p>
+</section>
+
+<section>
+  <h2><i class="fas fa-map-marker-alt"></i> Ubicación</h2>
+  <a class="btn-reseñas" href="https://maps.app.goo.gl/VGMn6AGvDJiAjF3A7" target="_blank">Ver ubicación y reseñas en Google Maps</a>
+</section>
+
+<a href="https://wa.me/541151358953" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+const sections = document.querySelectorAll('section');
+
+function showSectionsOnScroll() {
+  const triggerBottom = window.innerHeight * 0.85;
+  sections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+    if(sectionTop < triggerBottom){
+      section.classList.add('visible');
+    } else {
+      section.classList.remove('visible'); // permite repetir animación
+    }
+  });
+}
+
+window.addEventListener('scroll', showSectionsOnScroll);
+window.addEventListener('load', showSectionsOnScroll);
+</script>
 
 </body>
 </html>
