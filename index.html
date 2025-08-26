@@ -1,104 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cerrajería Jorge</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7f7f7;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #222;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-    header p {
-      font-style: italic;
-      margin: 5px 0 0;
-    }
-    main {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section {
-      margin-bottom: 30px;
-    }
-    h2 {
-      color: #444;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-    }
-    .map-container {
-      width: 100%;
-      max-width: 800px;
-      margin: auto;
-    }
-    iframe {
-      width: 100%;
-      height: 450px;
-      border: 0;
-    }
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      font-size: 0.9em;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cerrajería Jorge</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #f4f1e9;
+  background-image: url('https://www.transparenttextures.com/patterns/aged-paper.png');
+  color: #2b2b2b;
+  text-align: center;
+}
+
+header {
+  background: #e5d3b3;
+  padding: 50px 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em; 
+  margin: 0;
+  color: #3e3e3e;
+}
+
+header p {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 1.3em;
+  color: #4b4b4b;
+}
+
+section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  transition: opacity 1s ease, transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.85);
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+section:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+section h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+section h2 i {
+  color: #6b5b3e;
+}
+
+section p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  z-index: 100;
+  text-decoration: none;
+}
+
+.btn-reseñas {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #8b5e3c;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-reseñas:hover {
+  background: #6a4529;
+}
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>Cerrajería Jorge</h1>
-    <p>Más de 50 años prestando servicio en la zona</p>
-  </header>
+<header>
+  <h1>Cerrajería Jorge</h1>
+  <p>Con más de 55 años en la zona desde 1968 nuestra Cerrajería ha estado al servicio de sus clientes.</p>
+</header>
 
-  <main>
-    <section>
-      <h2>Servicios</h2>
-      <p>🔑 Copias de llaves comunes y con chip<br>
-         🚪 Apertura de puertas y vehículos<br>
-         🏠 Cerraduras de seguridad<br>
-         🔧 Reparación e instalación de cerraduras</p>
-    </section>
+<section>
+  <h2><i class="fas fa-tools"></i> Service a domicilio</h2>
+  <p>Casas - Consorcios - Empresas</p>
+</section>
 
-    <section>
-      <h2>Ubicación</h2>
-      <p>📍 Av. Márquez 1234, San Martín, Buenos Aires</p>
-      <div class="map-container">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3286.4509145689435!2d-58.5711159!3d-34.5421369!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcba1a014a10cf%3A0x76b88646b9fded49!2sCerrajeria%20Jorge!5e0!3m2!1ses-419!2sar!4v1756158256612!5m2!1ses-419!2sar" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </section>
+<section>
+  <h2><i class="fas fa-key"></i> Copias de llaves</h2>
+  <p>De todo tipo: Multipunto común, Ranurada y Telescópica - Doble Paleta - Yale - Comunes una Paleta - Caja Fuerte - Tipo Cruz Pasador - Tubular - Mapeadas - Etc.</p>
+</section>
 
-    <section>
-      <h2>Contacto</h2>
-      <p>📞 Teléfono: (011) 1234-5678<br>
-         📱 WhatsApp: +54 9 11 1234-5678<br>
-         ✉️ Email: contacto@cerrajeriajorge.com.ar</p>
-    </section>
-  </main>
+<section>
+  <h2><i class="fas fa-lock"></i> Instalación y Reparación de Cerraduras</h2>
+  <p>Comunes - Doble Paleta - Tipo Yale - Multipunto - Multianclaje - Digitales - Tipo Pomo - De Blindex - Candados - Etc.</p>
+  <p>Cambios de Combinación - Unificación - Amaestramiento - Adaptación y Restauración</p>
+</section>
 
-  <footer>
-    <p>© 2025 Cerrajería Jorge - Todos los derechos reservados</p>
-  </footer>
+<section>
+  <h2><i class="fas fa-address-card"></i> Contacto</h2>
+  <p><strong>Teléfono:</strong> 47291456</p>
+  <p><strong>Móvil:</strong> 1151358953</p>
+  <p><strong>Dirección:</strong> Artigas 6275 - Villa Ballester</p>
+  <p><strong>Email:</strong> <a href="mailto:cerrajeriajorge@hotmail.com">cerrajeriajorge@hotmail.com</a></p>
+</section>
+
+<section>
+  <h2><i class="fas fa-map-marker-alt"></i> Ubicación</h2>
+  <a class="btn-reseñas" href="https://maps.app.goo.gl/VGMn6AGvDJiAjF3A7" target="_blank">Ver ubicación y reseñas en Google Maps</a>
+</section>
+
+<a href="https://wa.me/541151358953" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+const sections = document.querySelectorAll('section');
+
+function showSectionsOnScroll() {
+  const triggerBottom = window.innerHeight * 0.85;
+  sections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+    if(sectionTop < triggerBottom){
+      section.classList.add('visible');
+    } else {
+      section.classList.remove('visible'); // permite repetir animación
+    }
+  });
+}
+
+window.addEventListener('scroll', showSectionsOnScroll);
+window.addEventListener('load', showSectionsOnScroll);
+</script>
 
 </body>
 </html>
